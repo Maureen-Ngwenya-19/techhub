@@ -1,0 +1,964 @@
+
+/* =====================================
+   LESSON 1: CSS RESET
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================
+   LESSON 2: BASIC BODY STYLING
+===================================== */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+
+/* =====================================
+   LESSON 3: CONTAINER
+===================================== */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+/* =====================================
+   LESSON 4: NAVIGATION BAR
+===================================== */
+
+.navbar {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    color: #3b82f6;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/* Navigation Menu */
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #3b82f6;
+}
+
+
+/* Cart Link */
+
+.cart-link {
+    background-color: #3b82f6;
+    color: white !important;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.cart-link:hover {
+    background-color: #2563eb !important;
+}
+
+
+/* =====================================
+   LESSON 5: HERO SECTION
+===================================== */
+
+.hero {
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+    min-height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    margin-top: 70px;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+
+/* Shop Now Button */
+
+.btn {
+    display: inline-block;
+    background-color: white;
+    color: #2563eb;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #dbeafe;
+    transform: translateY(-3px);
+}
+
+
+/* =====================================
+   LESSON 6: FEATURED PRODUCTS
+===================================== */
+
+.featured {
+    padding: 80px 0;
+    background-color: #f8fafc;
+}
+
+.featured h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: #1e293b;
+}
+
+
+/* Products Grid */
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+
+/* Product Card */
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Product Image */
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: #e2e8f0;
+}
+
+
+/* Product Information */
+
+.product-info {
+    padding: 20px;
+}
+
+.product-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #1e293b;
+}
+
+.product-description {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.product-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #3b82f6;
+    margin-bottom: 15px;
+}
+
+
+/* Product Actions */
+
+.product-actions {
+    display: flex;
+    gap: 10px;
+}
+
+
+/* Small Buttons */
+
+.btn-small {
+    padding: 8px 16px;
+    font-size: 14px;
+    flex: 1;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+/* Primary Button */
+
+.btn-primary {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #2563eb;
+}
+
+
+/* Secondary Button */
+
+.btn-secondary {
+    background-color: #e2e8f0;
+    color: #334155;
+}
+
+.btn-secondary:hover {
+    background-color: #cbd5e1;
+}
+
+
+/* =====================================
+   LESSON 7: PRODUCTS PAGE
+===================================== */
+
+.main-content {
+    padding-top: 120px;
+    padding-bottom: 50px;
+    min-height: 70vh;
+}
+
+
+/* Page Title */
+
+.page-title {
+    text-align: center;
+    font-size: 36px;
+    color: #1e293b;
+    margin-bottom: 40px;
+}
+
+
+/* Product Filters */
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+
+/* Filter Buttons */
+
+.filter-btn {
+    padding: 10px 22px;
+    border: none;
+    border-radius: 25px;
+    background-color: #e2e8f0;
+    color: #334155;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+
+/* Active Filter */
+
+.filter-btn.active {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.filter-btn:hover {
+    background-color: #2563eb;
+    color: white;
+}
+
+
+/* =====================================
+   LESSON 8: FOOTER
+===================================== */
+
+.footer {
+    background-color: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+
+/* =====================================
+   LESSON 9: RESPONSIVE DESIGN
+===================================== */
+
+@media screen and (max-width: 768px) {
+
+    .nav-container {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .nav-menu {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        margin-top: 110px;
+        min-height: 350px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .featured h2,
+    .page-title {
+        font-size: 28px;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filters {
+        gap: 10px;
+    }
+
+}
+
+
+/* =====================================
+   LESSON 15: CART PAGE LAYOUT
+===================================== */
+
+/* Cart Layout */
+
+.cart-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+
+/* Individual Cart Item */
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+    margin-bottom: 15px;
+}
+
+
+/* Cart Item Image */
+
+.cart-item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+/* Cart Item Details */
+
+.cart-item-details {
+    flex: 1;
+}
+
+
+/* Cart Item Name */
+
+.cart-item-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #1e293b;
+}
+
+
+/* Cart Item Price */
+
+.cart-item-price {
+    color: #64748b;
+    font-size: 14px;
+}
+
+
+/* Cart Item Controls */
+
+.cart-item-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+/* =====================================
+   QUANTITY CONTROLS
+===================================== */
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #f1f5f9;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+/* Quantity Buttons */
+
+.quantity-btn {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #64748b;
+}
+
+.quantity-btn:hover {
+    background-color: #3b82f6;
+    color: white;
+}
+
+
+/* Quantity Display */
+
+.quantity-display {
+    font-weight: bold;
+    min-width: 20px;
+    text-align: center;
+}
+
+
+/* Cart Item Total */
+
+.cart-item-total {
+    font-weight: bold;
+    font-size: 18px;
+    color: #3b82f6;
+    min-width: 80px;
+    text-align: right;
+}
+
+
+/* Remove Button */
+
+.remove-btn {
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.remove-btn:hover {
+    background-color: #dc2626;
+}
+
+
+/* =====================================
+   CART SUMMARY
+===================================== */
+
+.summary-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+    position: sticky;
+    top: 90px;
+}
+
+
+/* Summary Heading */
+
+.summary-card h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #1e293b;
+}
+
+
+/* Summary Rows */
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    padding: 8px 0;
+}
+
+
+/* Total Row */
+
+.total-row {
+    border-top: 2px solid #e2e8f0;
+    font-weight: bold;
+    font-size: 18px;
+    color: #1e293b;
+    margin-top: 15px;
+    padding-top: 15px;
+}
+
+
+/* Full Width Buttons */
+
+.full-width {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+}
+
+
+/* =====================================
+   EMPTY CART
+===================================== */
+
+.empty-cart {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.empty-cart h2 {
+    font-size: 28px;
+    color: #64748b;
+    margin-bottom: 15px;
+}
+
+.empty-cart p {
+    color: #94a3b8;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+
+/* =====================================
+   MOBILE RESPONSIVE CART
+===================================== */
+
+@media screen and (max-width: 768px) {
+
+    .cart-layout {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .cart-item-controls {
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .cart-item-total {
+        min-width: auto;
+    }
+
+    .summary-card {
+        position: static;
+    }
+
+}
+
+
+
+
+/* =====================================
+   NOTIFICATION POPUP
+===================================== */
+
+.notification {
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    background-color: #10b981;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 200;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/* =====================================
+   SEARCH BOX
+===================================== */
+
+.search-box {
+    max-width: 500px;
+    margin: 0 auto 25px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 20px;
+    border: 2px solid #d1d5db;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #64748b;
+    padding: 40px 0;
+}
+
+
+/* =====================================
+   CHECKOUT PAGE
+===================================== */
+
+.demo-notice {
+    background-color: #fef3c7;
+    border: 1px solid #f59e0b;
+    color: #92400e;
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.checkout-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.checkout-form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+}
+
+.form-section {
+    margin-bottom: 30px;
+}
+
+.form-section h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #1e293b;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 10px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-row.three-col {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #d1d5db;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+.btn-large {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#checkout-items {
+    margin-bottom: 20px;
+}
+
+.checkout-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.checkout-item:last-child {
+    border-bottom: none;
+}
+
+.checkout-item-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.checkout-item-details {
+    flex: 1;
+}
+
+.checkout-item-name {
+    font-weight: 500;
+    font-size: 14px;
+    color: #1e293b;
+}
+
+.checkout-item-quantity {
+    font-size: 12px;
+    color: #64748b;
+}
+
+.checkout-item-price {
+    font-weight: bold;
+    color: #3b82f6;
+}
+
+.summary-totals {
+    border-top: 2px solid #e2e8f0;
+    padding-top: 15px;
+}
+
+.success-message {
+    background-color: #10b981;
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.success-message h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.success-message p {
+    margin-bottom: 10px;
+}
+
+.success-message .btn {
+    margin-top: 15px;
+}
+
+
+/* =====================================
+   CONTACT PAGE
+===================================== */
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+
+.contact-info {
+    padding: 30px;
+}
+
+.contact-info h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #1e293b;
+}
+
+.contact-info > p {
+    color: #64748b;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.contact-item h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #3b82f6;
+}
+
+.contact-item p {
+    color: #374151;
+    font-size: 14px;
+}
+
+.contact-form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+}
+
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #d1d5db;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: inherit;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+
+/* =====================================
+   MOBILE: CHECKOUT AND CONTACT
+===================================== */
+
+@media screen and (max-width: 768px) {
+
+    .checkout-layout,
+    .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .form-row,
+    .form-row.three-col {
+        grid-template-columns: 1fr;
+    }
+
+    .notification {
+        left: 20px;
+        right: 20px;
+    }
+
+}

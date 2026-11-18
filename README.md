@@ -10,16 +10,11 @@ visitor browse products, fill a shopping cart and complete a (simulated) checkou
 ## Features
 
 - **5 pages:** Home, Products, Cart, Checkout and Contact
-- **14-product catalogue** with brands, ratings, sale badges and specs, rendered from a JavaScript array (prices in rand, R)
-- **Category filters, live search and sorting** that work together (categories can also be opened from links such as `products.html?category=phones`)
-- **Product detail pop-up** with specifications, stock level and add-to-cart
-- **Richer homepage:** hero image, benefits strip, category tiles, deals, brands, reviews and newsletter sign-up
-- **Free-delivery progress bar** in the cart and suggested products
-- **Contact page** with a map placeholder and an FAQ
-- **Shared header and footer** built once in `script.js` (with a mobile menu)
+- **Product catalogue** rendered from a JavaScript array (prices in rand, R)
+- **Category filters and live search** that work together
 - **Shopping cart:** add items, change quantities, remove items
 - **Cart saved in `localStorage`** so it survives page reloads
-- **Order summary** with a flat shipping fee (free over R2 000) and 15% VAT
+- **Order summary** with a flat shipping fee and 15% VAT
 - **Form validation** on checkout (email, 4-digit postal code, 16-digit card,
   future expiry date, CVV) and on the contact form
 - **Simulated order processing** using a Promise and `async`/`await`
@@ -35,8 +30,7 @@ techvibe/
 ├── checkout.html   Shipping and payment form
 ├── contact.html    Contact details and message form
 ├── style.css       All styling (reset, layout, components, responsive rules)
-├── script.js       All behaviour (header/footer, products, cart, validation, forms)
-├── images/         SVG product pictures, hero artwork and favicon
+├── script.js       All behaviour (products, cart, validation, forms)
 └── README.md
 ```
 
@@ -60,11 +54,10 @@ No installation is needed.
 
 ## Customising the Store
 
-- **Prices, VAT and shipping:** edit `SHIPPING_FEE`, `FREE_SHIPPING_OVER`, `VAT_RATE` and the `products`
+- **Prices, VAT and shipping:** edit `SHIPPING_FEE`, `VAT_RATE` and the `products`
   array at the top of `script.js`.
-- **Product images:** each product points to a file in `images/`. Drop in real photos
-  (for example `images/iphone.jpg`) and change the `image` value to match.
-- **Menu and footer:** edit `buildLayout()` at the top of `script.js`; every page updates.
+- **Product images:** the `makeImage()` helper draws coloured placeholders. Replace
+  the `image` values with paths such as `images/iphone.jpg` to use real photos.
 
 ## Known Limitations
 
@@ -74,7 +67,8 @@ No installation is needed.
 
 ## Possible Future Improvements
 
-- Separate product detail pages and image galleries
+- Product detail pages and image galleries
+- Sorting by price and name
 - Wish list and customer reviews
 - A Node.js back end with a database and a real payment provider
 

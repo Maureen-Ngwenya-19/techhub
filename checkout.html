@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Enter your delivery and payment details.">
+
     <title>Checkout - TechVibe</title>
-    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <!-- Header (built by script.js) -->
-    <header id="site-header"></header>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h2 class="logo">TechVibe</h2>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <a href="cart.html" class="cart-link">
+                        Cart (<span id="cart-count">0</span>)
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-<!-- Checkout Section -->
+
+    <!-- Checkout Section -->
     <main class="main-content">
         <div class="container">
 
             <h1 class="page-title">Checkout</h1>
-            <div class="steps"><span class="done">1. Cart</span><span class="now">2. Details</span><span>3. Confirmation</span></div>
 
             <p class="demo-notice">
                 Student project demo: no real payment is taken and no card details
@@ -106,7 +122,7 @@
                         </div>
 
                         <button type="submit" class="btn btn-primary full-width btn-large">
-                            Complete Order (demo)
+                            Complete Order
                         </button>
 
                     </form>
@@ -149,9 +165,17 @@
 
         </div>
     </main>
-    <!-- Footer (built by script.js) -->
-    <footer id="site-footer"></footer>
 
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 TechVibe. All rights reserved.</p>
+    </footer>
+
+
+    <!-- JavaScript -->
     <script src="script.js"></script>
+
 </body>
+
 </html>
