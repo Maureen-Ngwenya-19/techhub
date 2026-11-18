@@ -95,7 +95,6 @@ const featuredProducts = document.getElementById("featured-products");
 
 /* ---------- 2. HELPERS ---------- */
 
-// 24999 -> "R24 999.00"
 function formatPrice(price) {
     return "R" + price.toLocaleString("en-ZA", {
         minimumFractionDigits: 2,
