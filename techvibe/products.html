@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse phones, laptops, tablets and accessories at TechVibe.">
+    <title>Products - TechVibe</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header (built by script.js) -->
+    <header id="site-header"></header>
+
+    <main class="main-content">
+        <div class="container">
+            <h1 class="page-title">Our Products</h1>
+            <p class="page-subtitle">Search, filter and sort to find the right gadget.</p>
+
+            <!-- Search and sort -->
+            <div class="toolbar">
+                <div class="search-box">
+                    <input type="search" id="search-input" placeholder="Search by name or brand..." aria-label="Search products">
+                </div>
+                <select id="sort-select" class="sort-select" aria-label="Sort products">
+                    <option value="featured">Sort: Featured</option>
+                    <option value="price-asc">Price: low to high</option>
+                    <option value="price-desc">Price: high to low</option>
+                    <option value="rating">Highest rated</option>
+                    <option value="name">Name: A to Z</option>
+                </select>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="filters">
+                <button class="filter-btn active" data-category="all">All Products</button>
+                <button class="filter-btn" data-category="phones">Phones</button>
+                <button class="filter-btn" data-category="laptops">Laptops</button>
+                <button class="filter-btn" data-category="tablets">Tablets</button>
+                <button class="filter-btn" data-category="accessories">Accessories</button>
+            </div>
+
+            <p class="results-count" id="results-count" aria-live="polite"></p>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="products-grid">
+                <!-- JavaScript will display products here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (built by script.js) -->
+    <footer id="site-footer"></footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
