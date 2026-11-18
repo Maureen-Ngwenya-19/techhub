@@ -1,0 +1,153 @@
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding-top: 70px;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* NAVIGATION BAR */
+.navbar {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+/* LOGO */
+.logo {
+    color: #3b82f6;
+    font-size: 24px;
+}
+
+/* NAVIGATION MENU */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.nav-menu a:hover {
+    color: #3b82f6;
+}
+
+/* CART BUTTON */
+.cart-link {
+    background-color: #3b82f6;
+    color: white !important;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.cart-link:hover {
+    background-color: #2563eb;
+}
+
+/* HERO BANNER */
+.hero {
+    width: 100%;
+    min-height: 400px;
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* SHOP NOW BUTTON */
+.btn {
+    display: inline-block;
+    background-color: white;
+    color: #2563eb;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #dbeafe;
+    transform: translateY(-3px);
+}
+
+/* FEATURED PRODUCTS */
+.featured {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.featured h2 {
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
